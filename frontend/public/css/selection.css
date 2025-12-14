@@ -1,0 +1,119 @@
+.page-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.selection .game-controls {
+  display: flex;
+  margin: 0 0 2.5rem 0;
+  gap: 5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.selection .control-button {
+  padding: 0.8rem 1.5rem;
+}
+
+.status-text {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 3rem;
+  font-weight: 600;
+}
+
+.status-text.loading {
+  color: #1976d2;
+}
+
+.status-text.empty {
+  color: #f57c00;
+}
+
+.games-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.game-item {
+  background: rgba(10, 30, 60, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
+}
+
+.game-item:hover {
+  background: rgba(10, 30, 60, 0.9);
+  transform: translateX(10px);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.5), 0 0 40px rgba(123, 44, 191, 0.3);
+  border-color: rgba(0, 212, 255, 0.6);
+}
+
+.game-item:first-child {
+  border-left: 5px solid #00d4ff;
+}
+
+.game-info {
+  flex: 1;
+}
+
+.game-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #eaeaea;
+  margin-bottom: 0.5rem;
+}
+
+.game-author {
+  color: #666;
+  font-style: italic;
+}
+
+.game-difficulty {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.difficulty-easy {
+  background-color: #28a745;
+  color: white;
+}
+
+.difficulty-medium {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.difficulty-hard {
+  background-color: #dc3545;
+  color: white;
+}
+
+.selection .game-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .game-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+  }
+
+  .game-difficulty {
+      align-self: flex-end;
+  }
+}

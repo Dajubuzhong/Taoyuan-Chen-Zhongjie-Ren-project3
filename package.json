@@ -1,0 +1,14 @@
+{
+  "name": "sudoku",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": ["backend", "frontend"],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w backend\" \"npm start -w frontend\"",
+    "build": "npm run build -w frontend",
+    "prod": "npm run start -w backend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}

@@ -1,0 +1,140 @@
+.high-score-page .highscores-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.high-score-page .score-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.high-score-page .score-table thead {
+  background: linear-gradient(135deg, #00d4ff 0%, #7b2cbf 100%);
+  color: white;
+}
+
+.high-score-page .score-table th,
+.high-score-page .score-table td {
+  padding: 1rem;
+  text-align: center;
+}
+
+.high-score-page .score-table tbody tr {
+  background-color: rgba(15, 52, 96, 0.3);
+  transition: background-color 0.3s ease;
+  color: #eaeaea;
+}
+
+.high-score-page .score-table tbody tr:nth-child(even) {
+  background-color: rgba(0, 212, 255, 0.05);
+}
+
+.high-score-page .score-table tbody tr:hover {
+  background-color: rgba(0, 212, 255, 0.15);
+}
+
+.high-score-page .rank-cell {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #00d4ff;
+}
+
+.high-score-page .medal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.high-score-page .medal svg {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.high-score-page .rank-cell:hover .medal svg {
+  transform: scale(1.2) rotate(15deg);
+}
+
+.high-score-page .score-cell {
+  font-weight: 600;
+  color: #eaeaea;
+}
+
+.high-score-page .stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.high-score-page .stat-card {
+  background: rgba(10, 30, 60, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+  text-align: center;
+  border: 2px solid rgba(0, 212, 255, 0.3);
+}
+
+.high-score-page .stat-title {
+  font-size: 1rem;
+  color: #b8b8b8;
+  margin-bottom: 0.5rem;
+}
+
+.high-score-page .stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #00d4ff 0%, #7b2cbf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.empty-state-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .high-score-page .score-table {
+      font-size: 0.9rem;
+  }
+
+  .high-score-page .score-table th,
+  .high-score-page .score-table td {
+      padding: 0.75rem 0.5rem;
+  }
+
+  .high-score-page .stats-section {
+      grid-template-columns: 1fr;
+  }
+
+  .high-score-page .stat-number {
+      font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .high-score-page .score-table {
+      font-size: 0.8rem;
+  }
+
+  .high-score-page .score-table th,
+  .high-score-page .score-table td {
+      padding: 0.5rem 0.25rem;
+  }
+
+  .high-score-page .rank-cell {
+      font-size: 1rem;
+  }
+}
